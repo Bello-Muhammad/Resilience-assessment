@@ -131,26 +131,3 @@ const modelSchema = new ModelSchema(schemaConfig, {
 
 /** @type {ModelSchema} */
 module.exports = DatabaseModel.model(modelName, modelSchema);
-
-// Pass transformation controls straight into options to handle the mapping of _id to id
-// const modelSchema = new ModelSchema(schemaConfig, {
-//   collection: modelName,
-//   versionKey: false,
-//   toJSON: {
-//     transform: (doc, ret) => {
-//       ret.id = ret._id;
-//       delete ret._id;
-//       return ret;
-//     }
-//   },
-//   toObject: {
-//     transform: (doc, ret) => {
-//       ret.id = ret._id;
-//       delete ret._id;
-//       return ret;
-//     }
-//   }
-// });
-
-// /** @type {ModelSchema} */
-// module.exports = DatabaseModel.model(modelName, modelSchema);
